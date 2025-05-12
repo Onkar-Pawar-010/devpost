@@ -14,6 +14,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const githubAuthRoutes = require("./routers/githubAuthRoutes.js");
+const githubDataRoutes = require("./routers/githubDataRoutes");
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
@@ -26,6 +29,9 @@ app.use("/api/auth", authRouter);
 app.get("/", (req, res) => {
   res.json({ message: "Hello from the server" });
 });
+
+app.use("/auth/github", githubAuthRoutes);
+app.use("/api/github", githubDataRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("Listenning");
