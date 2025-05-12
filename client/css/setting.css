@@ -1,0 +1,238 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Container and Sidebar */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+body.dark-mode .sidebar {
+  background: #2c2c2c;
+  color: #f5f5f5;
+  border-right: 1px solid #444;
+}
+
+.sidebar img {
+  width: 5rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 16px 0;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li.active a,
+.sidebar nav ul li a:hover {
+  background: #eaf3ff;
+  color: #000000;
+}
+
+body.dark-mode .sidebar nav ul li a:hover {
+  background: #ece8e8;
+  color: #000000;
+}
+
+/* Main Section */
+.main-settings {
+  flex: 1;
+  padding: 30px;
+  background: #f8f9fa;
+}
+
+body.dark-mode .main-settings {
+  background: #1f1f1f;
+}
+
+.main-settings h1 {
+  margin-bottom: 24px;
+}
+
+/* Cards */
+.profile-card,
+.appearance-card,
+.preferences-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .appearance-card,
+body.dark-mode .preferences-card {
+  background: #2a2a2a;
+  color: #f1f1f1;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.profile-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+
+.change-btn {
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 12px 0;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 99%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Appearance Toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle button {
+  margin-top: 5px;
+  padding: 10px 10px;
+  background: #f5f2f2;
+  color: #030303;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#lightBtn:hover,
+#darkBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Toggle Switch */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Logout & Footer */
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #000;
+  color:white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+}

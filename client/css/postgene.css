@@ -1,0 +1,171 @@
+/* CSS: Light Themed Post Generator Page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  body.light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    /* background-color: #fff; */
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  body.dark-mode .sidebar {
+    background: #2c2c2c;
+    color: #f5f5f5;
+    border-right: 1px solid #444;
+  }
+  
+  .sidebar img {
+    width: 5rem;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .sidebar nav ul li.active a,
+  .sidebar nav ul li a:hover {
+    background-color: #e7f1ff;
+    color: #000000;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .badge {
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+  
+  .post-generator h1 {
+    margin-bottom: 16px;
+  }
+  
+  textarea {
+    width: 98%;
+    height: 120px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  button {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color:  #007bff;
+  }
+  
+  .platform-tabs {
+    margin-top: 20px;
+  }
+  
+  .tab {
+    background-color: #6b6a6a;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color:#6b6a6a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .post-output {
+    /* background-color: #fff; */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    min-height: 80px;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .suggestions {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .suggestions h3 {
+    margin-bottom: 6px;
+  }
+  
+  .suggestions p {
+    color: #666;
+  }

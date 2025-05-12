@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo"><img src="../assets/logo.png" alt="" /></div>
+      </header>
+      <main class="form-container">
+        <div class="card">
+          <h2>Welcome back</h2>
+          <p>Sign in to your account</p>
+          <button class="github-btn">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+              alt="GitHub"
+            />
+            Continue with GitHub
+          </button>
+          <div class="divider"><span>Or continue with</span></div>
+          <form>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+
+            <div class="form-footer">
+              <label>
+                <input type="checkbox" />
+                Remember me
+              </label>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <button
+              type="submit"
+              class="signin-btn"
+              onclick="document.location='dashboard.html'"
+            >
+              Log In
+            </button>
+          </form>
+          <p class="signup-text">
+            Don't have an account? <a href="pages/signup.html">Sign up</a>
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

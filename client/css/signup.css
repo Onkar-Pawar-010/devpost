@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .signup-container {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .signup-card {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .logo img {
+   width: 7rem;
+  }
+  
+  .signup-card h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .github-btn {
+    width: 100%;
+    background-color: #111827;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .github-btn img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 16px 0;
+    position: relative;
+  }
+  
+  .divider span {
+    background: white;
+    padding: 0 8px;
+    color: #9ca3af;
+    font-size: 12px;
+  }
+  
+  .divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+    z-index: -1;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  form label {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+  
+  form input {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+  }
+  
+  .create-btn {
+    margin-top: 16px;
+    background-color: #111827;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .signin-link {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .signin-link a {
+    color: #000;
+    text-decoration: none;
+  }
+  

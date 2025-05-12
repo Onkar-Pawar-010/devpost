@@ -1,0 +1,93 @@
+<!-- HTML: Post Generator Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Generator</title>
+    <link rel="stylesheet" href="../css/postgene.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <img src="../assets/logo.png" alt="" />
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i data-lucide="layout-dashboard"></i>Dashboard</a
+              >
+            </li>
+            <li class="active">
+              <a href="postgene.html"
+                ><i data-lucide="file-text"></i>Post Generator</a
+              >
+            </li>
+            <li>
+              <a href="#"><i data-lucide="github"></i>GitHub Integration</a>
+            </li>
+            <li>
+              <a href="analytics.html"
+                ><i data-lucide="bar-chart-2"></i>Analytics</a
+              >
+            </li>
+            <li>
+              <a href="setting.html"><i data-lucide="settings"></i>Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="top-bar">
+          <div class="user-info">
+            <span>Rohan Rode</span>
+            <!-- <span class="badge">Pro Plan</span> -->
+          </div>
+        </header>
+
+        <section class="post-generator">
+          <h1>Post Generator</h1>
+          <textarea
+            id="achievementInput"
+            placeholder="Share your achievement..."
+          ></textarea>
+          <button onclick="generatePost()">Generate Post</button>
+
+          <div class="platform-tabs">
+            <button class="tab active" onclick="switchTab('linkedin')">
+              LinkedIn
+            </button>
+            <button class="tab" onclick="switchTab('twitter')">Twitter</button>
+          </div>
+
+          <div class="post-output" id="postOutput">
+            Your generated post will appear here...
+          </div>
+          <div class="post-actions">
+            <button onclick="copyPost()">Copy</button>
+            <button onclick="autoPost()">Auto-Post</button>
+          </div>
+
+          <div class="suggestions">
+            <div>
+              <h3>Suggested Hashtags</h3>
+              <p>#achievement #success #productivity #growth #motivation</p>
+            </div>
+            <div>
+              <h3>Suggested Mentions</h3>
+              <p>@onkar010 @atharva20 @rohan7216 @26sattya</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/postgene.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

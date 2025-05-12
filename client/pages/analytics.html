@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="../css/analytics.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <img src="../assets/logo.png" alt="" />
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i data-lucide="layout-dashboard"></i>Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="postgene.html"
+                ><i data-lucide="file-text"></i>Post Generator</a
+              >
+            </li>
+            <li>
+              <a href="#"><i data-lucide="github"></i>GitHub Integration</a>
+            </li>
+            <li class="active">
+              <a href="analytics.html"
+                ><i data-lucide="bar-chart-2"></i>Analytics</a
+              >
+            </li>
+            <li>
+              <a href="setting.html"><i data-lucide="settings"></i>Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="main">
+        <div class="header">
+          <h1>Analytics Dashboard</h1>
+          <div class="filters">
+            <select>
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+            </select>
+            <select>
+              <option>All Platforms</option>
+              <option>LinkedIn</option>
+              <option>Twitter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="card">
+            Total Posts <strong>247</strong> <span>+12%</span>
+          </div>
+          <div class="card">
+            Total Likes <strong>1,524</strong> <span>+8%</span>
+          </div>
+          <div class="card">
+            Total Shares <strong>682</strong> <span>+15%</span>
+          </div>
+          <div class="card">Comments <strong>891</strong> <span>+5%</span></div>
+        </div>
+
+        <div class="charts">
+          <div class="chart">
+            Engagement Over Time<br /><span class="placeholder"
+              >Chart Placeholder</span
+            >
+          </div>
+          <div class="chart-row">
+            <div class="chart">
+              Twitter Performance<br /><span class="placeholder"
+                >Twitter Stats Chart</span
+              >
+            </div>
+            <div class="chart">
+              LinkedIn Performance<br /><span class="placeholder"
+                >LinkedIn Stats Chart</span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/analytics.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
