@@ -4,17 +4,22 @@ const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema(
   {
+    fullName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    // Common Fields
     email: {
       type: String,
-      required: [true, "Email is required!"],
+      required: false, // Optional for GitHub users
       trim: true,
-      unique: [true, "Email must be unique!"],
-      minLength: [5, "Email must contain atleast 5 characters!"],
+      unique: true,
       lowercase: true,
     },
     password: {
       type: String,
-      required: [true, "Password must be Provided!"],
+      required: false, // Optional for GitHub users
       trim: true,
       select: false,
     },
@@ -22,6 +27,22 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+
+    // GitHub OAuth Fields
+    githubId: {
+      type: Number,
+      unique: true,
+      sparse: true, // Allows GitHub and local users to coexist
+    },
+    username: String,
+    avatarUrl: String,
+    profileUrl: String,
+    accessToken: {
+      type: String,
+      select: false, // Change this to true so it's saved and can be retrieved
+    },
+
+    // Email Verification Fields
     verificationCode: {
       type: String,
       select: false,
@@ -30,6 +51,8 @@ const userSchema = mongoose.Schema(
       type: Number,
       select: false,
     },
+
+    // Forgot Password Fields
     forgotPasswordCode: {
       type: String,
       select: false,
@@ -40,7 +63,7 @@ const userSchema = mongoose.Schema(
     },
   },
   {
-    timestamp: true,
+    timestamps: true,
   }
 );
 

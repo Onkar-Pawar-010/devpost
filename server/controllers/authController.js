@@ -12,7 +12,7 @@ const jwt = require("jsonwebtoken");
 const transport = require("../middlewares/sendEmail");
 
 exports.signup = async (req, res) => {
-  const { email, password } = req.body;
+  const { fullName, email, password } = req.body;
   try {
     const { error, value } = signupSchema.validate({ email, password });
     if (error) {
@@ -30,6 +30,7 @@ exports.signup = async (req, res) => {
 
     const hashedPassword = await doHash(password, 12);
     const newUser = new User({
+      fullName,
       email,
       password: hashedPassword,
     });
@@ -89,7 +90,13 @@ exports.signin = async (req, res) => {
         token,
         message: "Logged in Succesfully",
       });
-  } catch (error) {}
+  } catch (error) {
+    console.error("Signin error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong during login. Please try again.",
+    });
+  }
 };
 
 exports.signout = async (req, res) => {

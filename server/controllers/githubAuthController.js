@@ -36,6 +36,7 @@ const handleGitHubCallback = async (req, res) => {
     console.log("Hi 1");
 
     const {
+      name: fullName,
       id: githubId,
       login: username,
       avatar_url: avatarUrl,
@@ -62,6 +63,7 @@ const handleGitHubCallback = async (req, res) => {
       user.avatarUrl = avatarUrl;
       user.profileUrl = profileUrl;
       user.accessToken = accessToken;
+      user.fullName = fullName;
       await user.save();
       console.log("Updated existing user by githubId:", user);
     } else if (!user && githubEmail) {
@@ -74,6 +76,7 @@ const handleGitHubCallback = async (req, res) => {
         user.avatarUrl = avatarUrl;
         user.profileUrl = profileUrl;
         user.accessToken = accessToken;
+        user.fullName = fullName;
         await user.save();
         console.log("Updated existing user by email:", user);
       }

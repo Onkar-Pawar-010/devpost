@@ -12,11 +12,16 @@ const User = require("../models/userModels");
 const getGitHubProfile = async (req, res) => {
   try {
     const accessToken = req.user.accessToken;
+    console.log("🔑 GitHub Access Token:", accessToken); // log the token
+
     const response = await axios.get("https://api.github.com/user", {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
+
     res.json(response.data);
+    console.log("✅ getGitHubProfile: Success");
   } catch (err) {
+    console.log("❌ GitHub API Error:", err.response?.data || err.message);
     res.status(500).json({ error: err.message });
   }
 };
